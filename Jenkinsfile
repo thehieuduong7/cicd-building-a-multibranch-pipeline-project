@@ -1,10 +1,12 @@
 pipeline {
-    agent any
+    agent { label 'ubuntu-10.6.5.21' }
     stages {
         stage('Build') {
             steps {
-                echo 'Hello world1!'
+                sh 'npm install'
+                echo 'install success!'
             }
+
         }
     }
 }
