@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 withCredentials([string(credentialsId: 'sudo-vm21-password', variable: 'SUDO_PASS')]) {
-                    sh 'sudo -S npm install --unsafe-perm=true --allow-root'
+                    sh 'sudo -S npm install'
                 }
             }
         }
